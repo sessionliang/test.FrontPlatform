@@ -1,0 +1,49 @@
+﻿<div ng-controller="common.views.staffs.create as vm">
+    <section class="content-header clearfix">
+        <h1 class="pull-left">
+            添加人员
+            <small ng-show="vm.returnUrl"><a href="{{vm.returnUrl}}"><i class="fa fa-arrow-circle-left"></i>返回</a></small>
+        </h1>
+        <div class="pull-right">
+            <button type="submit" name="save" class="btn bg-blue" ng-click="vm.save()" ng-disabled="staffForm.$invalid">
+                <i class="fa fa-floppy-o"></i>
+                保存
+            </button>
+            <button type="submit" name="save-continue" class="btn bg-blue" ng-click="vm.save()" ng-disabled="staffForm.$invalid">
+                <i class="fa fa-floppy-o"></i>
+                保存并继续添加
+            </button>
+        </div>
+    </section>
+    <section class="content">
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p>添加一个员工</p>
+
+                    <form name="staffForm" novalidate>
+                        <div class="row">
+                            <div class="form-group col-lg-6">
+                                <label for="name">姓名:</label>
+                                <input class="form-control" type="text" id="name" name="name" ng-model="vm.staff.name" required ng-maxlength="5" ng-focus />
+                                <span style='color:red;' ng-show='staffForm.name.$dirty && staffForm.name.$invalid'>
+                                    <span ng-show='staffForm.name.$error.required'>用户名是必须的。</span>
+                                    <span ng-show='staffForm.name.$error.maxlength'>用户名最大长度为5。</span>
+                                </span>
+                            </div>
+                            <div class="form-group  col-lg-6">
+                                <label for="phone">手机号:</label>
+                                <input class="form-control" type="text" id="phone" name="phone" ng-model="vm.staff.phone" required ng-pattern="/^1[34578]\d{9}$/" ng-focus />
+                                <span style='color:red;' ng-show='staffForm.phone.$dirty && staffForm.phone.$invalid'>
+                                    <span ng-show='staffForm.phone.$error.required'>手机号是必须的。</span>
+                                    <span ng-show='staffForm.phone.$error.pattern'>手机号格式不正确。</span>
+                                </span>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

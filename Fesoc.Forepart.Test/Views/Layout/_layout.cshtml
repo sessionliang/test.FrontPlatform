@@ -1,0 +1,82 @@
+﻿@using Fesoc.Forepart.Test.Core
+@using Fesoc.Forepart.Test.App_Start.Bunding
+
+<!DOCTYPE html>
+<!--[if IE 8]><html lang="en" class="ie8 no-js"><![endif]-->
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" @(CultureHelper.IsRtl ? "dir=\"rtl\"" : "")>
+<!--[endif]-->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Fesco.Test</title>
+    <meta name="description" content="Fesco" />
+    <meta name="keywords" content="Fesco" />
+    <meta name="author" content="Fesco" />
+
+    <link rel="shortcut icon" href="~/favicon.ico" />
+
+    @Styles.Render("~/Bundles/Frontend/libs/css" + (CultureHelper.IsRtl ? "RTL" : ""))
+    @RenderSection("Styles", false)
+    @Styles.Render("~/Bundles/Common/css")
+
+    @{
+        var hideSidebar = false;//默认显示菜单
+    }
+
+    @Scripts.Render(ScriptPaths.JQuery)
+
+</head>
+<body class="hold-transition skin-blue sidebar-mini @if (hideSidebar) {<text>sidebar-collapse</text> } ">
+
+    <div class="throbber">
+        <div class="curtain">
+        </div>
+        <div class="curtain-content">
+            <div>
+                <h1 class="throbber-header">Common.Wait...</h1>
+                <p>
+                    <img src="@Url.Content("~/content/images/throbber-synchronizing.gif")" alt="" />
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="ajaxBusy">
+        <span>&nbsp;</span>
+    </div>
+
+    <div class="wrapper">
+        @Html.Partial("~/Views/Layout/_Header.cshtml")
+
+        <div class="content-wrapper">
+            @Html.Partial("~/Views/Layout/Notifications.cshtml")
+            <div>
+                @RenderBody()
+            </div>
+        </div>
+
+
+        @Html.Partial("~/Views/Layout/_Footer.cshtml")
+    </div>
+
+
+
+    @Scripts.Render("~/Bundles/Frontend/libs/js")
+    @RenderSection("Scripts", false)
+    @Scripts.Render("~/Bundles/Common/js")
+
+    <a id="backTop" class="btn btn-back-top bg-teal"></a>
+    <script>
+        $(document).ready(function () {
+            $('#backTop').backTop();
+
+            $('a.sidebar-toggle').on('click', function () {
+                var collapsed = $('body').hasClass('sidebar-collapse');
+                saveUserPreferences('@(Url.Action("SavePreference", "Preferences"))', 'hideSidebar', collapsed);
+            });
+        });
+    </script>
+</body>
+</html>

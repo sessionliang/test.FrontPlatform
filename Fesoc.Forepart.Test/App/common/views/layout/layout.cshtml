@@ -1,0 +1,73 @@
+﻿@using Fesoc.Forepart.Test.Core
+@using Fesoc.Forepart.Test.App_Start.Bunding
+
+<!DOCTYPE html>
+<!--[if IE 8]><html lang="en" class="ie8 no-js"><![endif]-->
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" data-ng-app="app" @(CultureHelper.IsRtl ? "dir=\"rtl\"" : "")>
+<!--[endif]-->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Fesco.Test</title>
+    <meta name="description" content="Fesco" />
+    <meta name="keywords" content="Fesco" />
+    <meta name="author" content="Fesco" />
+
+    <link rel="shortcut icon" href="~/favicon.ico" />
+
+    @Styles.Render("~/Bundles/App/libs/css" + (CultureHelper.IsRtl ? "RTL" : ""))
+    @Styles.Render("~/Bundles/Common/css")
+    @Styles.Render("~/Bundles/App/css")
+
+    @{
+        var hideSidebar = false;//默认显示菜单
+    }
+
+</head>
+<body ng-controller="common.views.layout as vm" class="hold-transition skin-blue sidebar-mini @if (hideSidebar) {<text>sidebar-collapse</text> } ">
+
+    <div class="throbber">
+        <div class="curtain">
+        </div>
+        <div class="curtain-content">
+            <div>
+                <h1 class="throbber-header">Common.Wait...</h1>
+                <p>
+                    <img src="@Url.Content("~/content/images/throbber-synchronizing.gif")" alt="" />
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="ajaxBusy">
+        <span>&nbsp;</span>
+    </div>
+
+    <div class="wrapper">
+        <div data-ng-include="'~/App/common/views/layout/header.cshtml'" data-ng-controller="common.views.layout.header as vm"></div>
+
+        <div class="content-wrapper">
+            <div data-ng-include="'~/App/common/views/layout/notifications.cshtml'" data-ng-controller="common.views.layout.notifications as vm"></div>
+            <div ui-view>
+            </div>
+        </div>
+
+        <div data-ng-include="'~/App/common/views/layout/footer.cshtml'"></div>
+    </div>
+
+    @Scripts.Render("~/Bundles/App/libs/js")
+    @Scripts.Render("~/Bundles/Common/js")
+    @Scripts.Render("~/Bundles/App/js")
+
+    @Scripts.Render("~/Fesco/Framework/scripts/fesco.js")
+    @Scripts.Render("~/Fesco/Framework/scripts/libs/angularjs/fesco.ng.js")
+    @Scripts.Render("~/Fesco/Framework/scripts/libs/fesco.sweet-alert.js")
+    @Scripts.Render("~/Fesco/Framework/scripts/libs/fesco.jquery.js")
+
+    <a id="backTop" class="btn btn-back-top bg-teal"></a>
+
+
+</body>
+</html>

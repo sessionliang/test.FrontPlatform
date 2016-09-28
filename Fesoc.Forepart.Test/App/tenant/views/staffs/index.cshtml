@@ -1,0 +1,95 @@
+﻿<div ng-controller="common.views.staffs.index as vm">
+
+    <section class="content-header">
+        <h1>
+            员工列表
+            <small></small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> 社保公积金</a></li>
+            <li class="active">查询修改</li>
+        </ol>
+    </section>
+    <div class="content">
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-footer content-header clearfix">
+                    <div class="pull-left">
+                        <a href="#/tenant/staffsCreate/tenant/staffs" class="btn bg-blue">
+                            <i class="fa fa-plus-square"></i>
+                            添加
+                        </a>
+                        <button type="submit" name="download-catalog-pdf" class="btn bg-purple">
+                            <i class="fa fa-file-pdf-o"></i>
+                            下载PDF
+                        </button>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-success">
+                                <i class="fa fa-download"></i>
+                                导出
+                            </button>
+                            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <span class="caret"></span>
+                                <span class="sr-only">&nbsp;</span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <button type="submit" name="exportxml-all">
+                                        <i class="fa fa-file-code-o"></i>
+                                        导出全部到XML
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" id="exportxml-selected">
+                                        <i class="fa fa-file-code-o"></i>
+                                        导出所选到XML
+                                    </button>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <button type="submit" name="exportexcel-all">
+                                        <i class="fa fa-file-excel-o"></i>
+                                        导出全部到Excel
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" id="exportexcel-selected">
+                                        <i class="fa fa-file-excel-o"></i>
+                                        导出全部到Excel
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <button type="button" name="importexcel" class="btn bg-olive" data-toggle="modal" data-target="#importexcel-window">
+                            <i class="fa fa-upload"></i>
+                            导入
+                        </button>
+
+                        <button type="button" id="delete-selected" class="btn bg-red">
+                            <i class="fa fa-trash-o"></i>
+                            删除
+                        </button>
+                    </div>
+                </div>
+                <div class="panel-heading">
+                    <table id="dt" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>Office</th>
+                                <th>Age</th>
+                                <th>Start date</th>
+                                <th>Salary</th>
+                                <th>action</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

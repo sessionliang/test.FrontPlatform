@@ -1,0 +1,933 @@
+﻿<ul class="sidebar-menu">
+
+    <li>
+        <a href="/Admin" class="menu-item-link">
+
+            <i class="fa fa-desktop"></i>
+
+            <span class="menu-item-title">Dashboard</span>
+        </a>
+    </li>
+    <li class="treeview current-active-item">
+        <a href="#">
+
+            <i class="fa fa-book"></i>
+
+            <span>Catalog</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+
+
+        <ul class="treeview-menu" style="display: none;">
+            <li class="current-active-item">
+                <a href="/Admin/Product/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Products</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/Category/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/Manufacturer/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Manufacturers</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/Product/BulkEdit" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Bulk edit products</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/ProductReview/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Product reviews</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/Product/ProductTags" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Product tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/Product/LowStockReport" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Low stock report</span>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href="#">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span>Attributes</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+
+
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="/Admin/ProductAttribute/List" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Product attributes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/SpecificationAttribute/List" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Specification attributes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/CheckoutAttribute/List" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Checkout attributes</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li class="treeview">
+        <a href="#">
+
+            <i class="fa fa-shopping-cart"></i>
+
+            <span>Sales</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+
+
+        <ul class="treeview-menu" style="display: none;">
+            <li>
+                <a href="/Admin/Order/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Orders</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/Order/ShipmentList" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Shipments</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/ReturnRequest/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Return requests</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/RecurringPayment/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Recurring payments</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/GiftCard/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Gift cards</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/ShoppingCart/CurrentCarts" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Current shopping carts</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/ShoppingCart/CurrentWishlists" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Current wishlists</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/Order/BestsellersReport" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Bestsellers</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/Order/NeverSoldReport" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Products never purchased</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/Order/CountryReport" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Country report</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="treeview">
+        <a href="#">
+
+            <i class="fa fa-user"></i>
+
+            <span>Customers</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+
+
+        <ul class="treeview-menu" style="display: none;">
+            <li>
+                <a href="/Admin/Customer/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Customers</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/CustomerRole/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Customer roles</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/OnlineCustomer/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Online customers</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/Customer/Reports" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Customer reports</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/Vendor/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Vendors</span>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href="#">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span>Activity Log</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+
+
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="/Admin/ActivityLog/ListLogs" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Activity Log</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/ActivityLog/ListTypes" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Activity Types</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li class="treeview">
+        <a href="#">
+
+            <i class="fa fa-tags"></i>
+
+            <span>Promotions</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+
+
+        <ul class="treeview-menu" style="display: none;">
+            <li>
+                <a href="/Admin/Discount/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Discounts</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/Affiliate/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Affiliates</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/NewsLetterSubscription/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Newsletter subscribers</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/Campaign/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Campaigns</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="treeview">
+        <a href="#">
+
+            <i class="fa fa-cubes"></i>
+
+            <span>Content management</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+
+
+        <ul class="treeview-menu" style="display: none;">
+            <li>
+                <a href="/Admin/Topic/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Topics (pages)</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/MessageTemplate/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Message templates</span>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href="#">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span>News</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+
+
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="/Admin/News/List" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">News items</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/News/Comments" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">News comments</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span>Blog</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+
+
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="/Admin/Blog/List" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Blog posts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Blog/Comments" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Blog comments</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="/Admin/Poll/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Polls</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/Forum/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Forums</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="treeview">
+        <a href="#">
+
+            <i class="fa fa-gears"></i>
+
+            <span>Configuration</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+
+
+        <ul class="treeview-menu" style="display: none;">
+            <li class="treeview">
+                <a href="#">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span>Settings</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+
+
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="/Admin/Setting/GeneralCommon" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">General settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Setting/CustomerUser" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Customer settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Setting/Order" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Order settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Setting/Shipping" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Shipping settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Setting/Tax" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Tax settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Setting/Catalog" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Catalog settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Setting/ShoppingCart" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Shopping cart settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Setting/RewardPoints" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Reward points</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Setting/Vendor" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Vendor settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Setting/Blog" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Blog settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Setting/News" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">News settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Setting/Forum" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Forum settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Setting/Media" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Media settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Setting/AllSettings" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">All settings (advanced)</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="/Admin/EmailAccount/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Email accounts</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/Store/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Stores</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/Country/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Countries</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/Language/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Languages</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/Currency/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Currencies</span>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href="#">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span>Payment</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+
+
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="/Admin/Payment/Methods" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Payment methods</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Payment/MethodRestrictions" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Payment method restrictions</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span>Tax</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+
+
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="/Admin/Tax/Providers" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Tax providers</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Tax/Categories" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Tax categories</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span>Shipping</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+
+
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="/Admin/Shipping/Providers" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Shipping providers</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Shipping/DeliveryDates" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Delivery dates</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Shipping/Warehouses" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Warehouses</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Shipping/PickupPointProviders" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Pickup points</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Measure/List" class="menu-item-link">
+
+                            <i class="fa fa-dot-circle-o"></i>
+
+                            <span class="menu-item-title">Measures</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="/Admin/Security/Permissions" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Access control list</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/Widget/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Widgets</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/ExternalAuthentication/Methods" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">External authentication</span>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href="#">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span>Plugins</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+
+
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="/Admin/Plugin/List" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Local plugins</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Plugin/OfficialFeed" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">All plugins and themes</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li class="treeview">
+        <a href="#">
+
+            <i class="fa fa-cube"></i>
+
+            <span>System</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+
+
+        <ul class="treeview-menu" style="display: none;">
+            <li>
+                <a href="/Admin/Common/SystemInfo" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">System information</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/Log/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Log</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/Common/Warnings" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Warnings</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/Common/Maintenance" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Maintenance</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/QueuedEmail/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Message queue</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/ScheduleTask/List" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Schedule tasks</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Admin/Common/SeNames" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Search engine friendly page names</span>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href="#">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span>Templates</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+
+
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="/Admin/Template/CategoryTemplates" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Category templates</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Template/ManufacturerTemplates" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Manufacturer templates</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Template/ProductTemplates" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Product templates</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Template/TopicTemplates" class="menu-item-link">
+
+                            <i class="fa fa-genderless"></i>
+
+                            <span class="menu-item-title">Topic templates</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li class="treeview">
+        <a href="#">
+
+            <i class="fa fa-question-circle"></i>
+
+            <span>Help</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+
+
+        <ul class="treeview-menu">
+            <li>
+                <a href="http://docs.nopcommerce.com/display/nc/nopCommerce+Documentation?utm_source=admin-panel&amp;utm_medium=menu&amp;utm_campaign=admin-panel" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Help topics</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.nopcommerce.com/boards/?utm_source=admin-panel&amp;utm_medium=menu&amp;utm_campaign=admin-panel" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Community forums</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.nopcommerce.com/p/541/nopcommerce-premium-support-services.aspx?utm_source=admin-panel&amp;utm_medium=menu&amp;utm_campaign=admin-panel" class="menu-item-link">
+
+                    <i class="fa fa-dot-circle-o"></i>
+
+                    <span class="menu-item-title">Premium support services</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+</ul>
