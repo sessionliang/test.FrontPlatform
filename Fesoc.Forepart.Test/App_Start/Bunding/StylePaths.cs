@@ -8,20 +8,22 @@ namespace Fesoc.Forepart.Test.App_Start.Bunding
     public static class StylePaths
     {
         //样式表文件路径
-        public const string Styles = "~/Content/styles.css";
-        public const string StylesRTL = "~/Content/styles.rtl.css";
-        public const string AdminLTE = "~/Content/adminLTE/AdminLTE-2.3.0.min.css";
-        public const string AdminLTERTL = "~/Content/adminLTE/AdminLTE-2.3.0.rtl.css";
-        public const string AdminLTESkins = "~/Content/adminLTE/skins/_all-skins.min.css";
-        public const string Bootstrap = "~/libs/bootstrap/css/bootstrap.min.css";
-        public const string BootstrapRTL = "~/libs/bootstrap/css/bootstrap-rtl.min.css";
-        public const string Typeahead = "~/Content/typeahead/typeahead.css";
-        public const string FontAwesome = "~/Content/fontAwesome/css/font-awesome-4.6.3.min.css";
+
+        //前端框架
+        public const string AdminLTE = "~/libs/bower_components/adminLTE/dist/css/AdminLTE.min.css";
+        public const string AdminLTESkins = "~/libs/bower_components/adminLTE/dist/css/skins/_all-skins.min.css";
+
+        //Bootstrap
+        public const string Bootstrap = "~/libs/bower_components/bootstrap/dist/css/bootstrap.min.css";
+
+        //FontAwesome
+        public const string FontAwesome = "~/libs/bower_components/font-awesome/css/font-awesome.min.css";
 
         //JQuery DataTable
-        public const string JQuery_DataTable = "~/libs/jquery-dataTable/css/dataTables.bootstrap.min.css";
+        public const string JQuery_DataTable = "~/libs/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css";
 
-        public const string Sweet_Alert = "~/libs/sweetalert/sweet-alert.css";
+        //弹窗
+        public const string Sweet_Alert = "~/libs/bower_components/sweetalert/dist/sweetalert.css";
 
 
         /// <summary>

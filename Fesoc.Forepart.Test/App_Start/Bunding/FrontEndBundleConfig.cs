@@ -24,10 +24,7 @@ namespace Fesoc.Forepart.Test.App_Start.Bunding
                     ScriptPaths.JQuery,
                     ScriptPaths.Bootstrap,
                     ScriptPaths.AdminLTE,
-                    ScriptPaths.Typeahead,
-                    ScriptPaths.AdminCommon,
-                    ScriptPaths.AdminNavigation,
-                    ScriptPaths.AdminSearch
+                    ScriptPaths.Typeahead
                     )
                 );
         }
@@ -37,12 +34,9 @@ namespace Fesoc.Forepart.Test.App_Start.Bunding
             bundles.Add(
                 new StyleBundle("~/Bundles/Frontend/libs/css" + (isRTL ? "RTL" : ""))
                 .Include(StylePaths.AdminLTESkins, new CssRewriteUrlWithVirtualDirectoryTransform())
-                    .Include(StylePaths.Typeahead, new CssRewriteUrlWithVirtualDirectoryTransform())
                     .Include(StylePaths.FontAwesome, new CssRewriteUrlWithVirtualDirectoryTransform())
-                    .Include(isRTL ? StylePaths.BootstrapRTL : StylePaths.Bootstrap, new CssRewriteUrlWithVirtualDirectoryTransform())
-                    .Include(isRTL ? StylePaths.AdminLTERTL : StylePaths.AdminLTE, new CssRewriteUrlWithVirtualDirectoryTransform())
-                    .Include(isRTL ? StylePaths.StylesRTL : StylePaths.Styles, new CssRewriteUrlWithVirtualDirectoryTransform()
-                    )
+                    .Include(StylePaths.Bootstrap, new CssRewriteUrlWithVirtualDirectoryTransform())
+                    .Include(StylePaths.AdminLTE, new CssRewriteUrlWithVirtualDirectoryTransform())
                 );
         }
     }

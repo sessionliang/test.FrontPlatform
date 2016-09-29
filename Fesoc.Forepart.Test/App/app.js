@@ -3,8 +3,6 @@ var appModule = angular.module("app", [
     //angularjs base start
     "ui.router",
     "ui.bootstrap",
-    'ui.utils',
-    "ui.jq",
     'ui.grid',
     'ui.grid.pagination',
     //angularjs base end
